@@ -1,0 +1,11 @@
+# JetBrains
+.idea/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# KDE
+.directory
