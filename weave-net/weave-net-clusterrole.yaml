@@ -1,0 +1,34 @@
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRole
+metadata:
+  name: weave-net
+  annotations:
+    cloud.weave.works/launcher-info: |-
+      {
+        "original-request": {
+          "url": "/k8s/net?k8s-version=v1.10",
+          "date": "Sun Apr 29 2018 05:56:28 GMT+0000 (UTC)"
+        },
+        "email-address": "support@weave.works"
+      }
+  labels:
+    name: weave-net
+rules:
+  - apiGroups:
+      - ''
+    resources:
+      - pods
+      - namespaces
+      - nodes
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - networking.k8s.io
+    resources:
+      - networkpolicies
+    verbs:
+      - get
+      - list
+      - watch
