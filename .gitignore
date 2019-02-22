@@ -1,11 +1,10 @@
-# JetBrains
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# vagrant
+.vagrant/
+ubuntu-bionic-18.04-cloudimg-console.log
+
+# misc
 .idea/
-
-# VS Code
 .vscode/
-
-# macOS
 .DS_Store
-
-# KDE
-.directory
