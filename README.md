@@ -1,2 +1,2 @@
 # Kubernetes
-> :rocket: _Kubernetes manifest examples._
+> :rocket: Kubernetes on Ubuntu with microk8s
