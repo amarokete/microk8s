@@ -2,10 +2,6 @@
 
 set -eo pipefail
 
-# Disable UFW
-sudo systemctl disable ufw.service
-sudo service ufw stop
-
 # Disable Linux Containers
 sudo systemctl disable lxd.service
 sudo systemctl disable lxcfs.service
