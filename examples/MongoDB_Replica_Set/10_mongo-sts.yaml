@@ -15,21 +15,20 @@ spec:
     spec:
       containers:
       - name: mongo
-        image: mongo:3.6.4
+        image: mongo:3.6.10
         ports:
-        - name: mongodb
-          containerPort: 27017
+        - containerPort: 27017
         volumeMounts:
-        - name: mongo-pvc
+        - name: mongo
           mountPath: /data/db
         command: ["docker-entrypoint.sh", "--replSet", "rs"]
   volumeClaimTemplates:
   - metadata:
-      name: mongo-pvc
+      name: mongo
     spec:
-      storageClassName: mongo-sc
+      storageClassName: microk8s-hostpath
       accessModes:
-      - ReadWriteOnce
+        - ReadWriteOnce
       resources:
         requests:
           storage: 100Mi
