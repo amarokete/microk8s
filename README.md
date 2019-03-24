@@ -1,4 +1,4 @@
-# Kubernetes
+# microk8s
 
 > :rocket: Kubernetes on Ubuntu with microk8s.
 
